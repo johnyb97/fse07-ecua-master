@@ -1,0 +1,11 @@
+image: stronglytyped/arm-none-eabi-gcc
+
+build:
+  stage: build
+  script:
+    - make -C fse07-ecua
+
+  artifacts:
+    paths:
+      - fse07-ecua/*.elf
+      - fse07-ecua/*.hex
